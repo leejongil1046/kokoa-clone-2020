@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find - Kokoa Clone</title>
+    <title>Settings - Kokoa Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -16,46 +16,51 @@
       <div class="status-bar__column">
         <span>18:43</span>
       </div>
-      <div class="status-bar__column">
+      <div class="status-bar__ column">
         <span>110%</span>
         <i class="fa-solid fa-battery-full fa-lg"></i>
         <i class="fa-solid fa-bolt-lightning"></i>
       </div>
     </div>
 
-    <header class="screen-header">
-      <h1 class="screen-header__title">Chats</h1>
-      <div class="screen-header__icons">
-        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-        <span><i class="fa-regular fa-comment-dots fa-lg"></i></span>
-        <span><i class="fa-solid fa-music fa-lg"></i></span>
-        <span>
-          <a href="settings.html">
-            <i class="fa-solid fa-gear fa-lg"> </i>
-          </a>
-        </span>
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="more.html">
+          <i class="fa-solid fa-angle-left fa-3x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Settings</h1>
+      </div>
+      <div class="alt-header__column">
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
       </div>
     </header>
 
     <main class="main-screen">
-      <div class="user-component">
-        <div class="user-component__column">
-          <img
-            src="https://github.com/leejongil1046/kokoa-clone-2020/blob/main/screenshots/Tany.jpg?raw=true"
-            class="user-component__avatar user-component__avatar"
-          />
-          <div class="user-component__text">
-            <h4 class="user-component__title">Tany</h4>
-            <h6 class="user-component__subtitle">
-              Please check My Kokoa Account Info
-            </h6>
+      <ul class="settings-list">
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>Notices</span>
           </div>
-        </div>
-        <div class="user-component__column">
-          <span class="user-component__time">21:22</span>
-          <span class="badge">1</span>
-        </div>
-      </div>
+          <div class="settings__setting-column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-flask"></i>
+            <span>Kokoa Lab</span>
+          </div>
+          <div class="settings__setting-column"></div>
+        </li>
+        <li class="settings__setting">
+          <div class="settings__setting-column">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Version</span>
+          </div>
+          <div class="settings__setting-column">Latest Version</div>
+        </li>
+      </ul>
     </main>
 
     <nav class="nav">
@@ -68,7 +73,7 @@
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
             <span class="nav__notification badge">1</span>
-            <i class="fa-solid fa-comment fa-2x"></i>
+            <i class="fa-regular fa-comment fa-2x"></i>
           </a>
         </li>
         <li class="nav__btn">
