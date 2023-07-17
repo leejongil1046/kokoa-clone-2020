@@ -4,6 +4,10 @@
   align-items: center;
   padding: var(--horizontal-space);
   margin-bottom: 15px;
+  position: sticky;
+  top: 25px;
+  background-color: white;
+  z-index: 1;
 }
 
 .screen-header__title {
