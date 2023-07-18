@@ -18,7 +18,7 @@
 }
 
 .main-chat {
-  margin-top: 120px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,10 +33,37 @@
   margin-bottom: 25px;
 }
 
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .message-row {
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+  animation: fadeInLeft 0.5s linear;
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.message-row--own {
+  animation: fadeInRight 0.5s linear;
 }
 
 .message-row img {
@@ -97,6 +124,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -114,24 +142,23 @@
 
 .reply input {
   height: 30px;
+  bottom: 0;
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
-}
-
-.reply input::placeholder {
-  padding: 15px;
+  padding-left: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button {
   position: absolute;
-  right: -3px;
+  right: -15px;
   top: 2px;
 }
 
 .reply__column:last-child > i {
-  right: 40px;
+  right: 30px;
   top: 16px;
 }
 
@@ -150,4 +177,25 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-face-smile,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 91vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
